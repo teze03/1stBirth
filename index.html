@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('20848e5d3a7df2abc56a24317cba154a');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '하준이의 돌잔치에 초대합니다',
+        description: '아래 버튼을 눌러 상세 정보를 확인하세요',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyMjA0MjlfMjA0/MDAxNjUxMjI5MTYzMDk0.Eyb-PTZL6cULqaU76jManiqAXnov9Lvr9w-Al6E8VFcg.HmUQdwyi9ASQ07XMnsrSrBQ1j5LzJ_W-0v2gFkMAQkkg.JPEG.teze_03_/IMG_6513.jpeg?type=w966',
+        link: {
+          mobileWebUrl: 'https://hajun0708.quv.kr/',
+          webUrl: 'https://hajun0708.quv.kr/',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '모바일 초대장 보기',
+          link: {
+            mobileWebUrl: 'https://hajun0708.quv.kr/',
+            webUrl: 'https://hajun0708.quv.kr/',
+          },
+        },
+      ],
+      buttons: [
+        {
+          title: '주소 확인하기',
+          link: {
+            mobileWebUrl: 'http://naver.me/GSiUBLZq',
+            webUrl: 'http://naver.me/GSiUBLZq',
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
