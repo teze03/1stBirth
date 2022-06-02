@@ -1,0 +1,64 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>카톡 공유</title> 
+<스크립트 유형= "텍스트/자바스크립트" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> 
+</head> 
+<바디> 
+    <입력 유형="버튼" onClick=" sendLinkCustom();" 값="사용자 지정"/> 
+    <입력 유형="버튼" onClick="sendLinkDefault();" value="Default"/> 
+
+<script type="text/javascript"> 
+    function sendLinkCustom() { 
+        Kakao.init("[자바스크립트 API 키]"); 
+        카카오.링크. 
+            sendCustom({ 템플릿 ID: [템플릿 ID] 
+        }); 
+    } 
+</script> 
+
+<script> 
+시도 {
+  function sendLinkDefault() { 
+    Kakao.init('[Javascript API key]') 
+    Kakao.Link.sendDefault({ 
+      objectType: 'feed', 
+      content: { 
+        title: '딸기 치즈케이크', 
+        description: '# '딸기 치즈케이크', description: '# '딸기 치즈케이크') #카페 #분위기 #소개팅', 
+        imageUrl: 
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png', 
+        링크: { 
+          mobileWebUrlpers: 'https://developers. , 
+          webUrl: 'https://developers.kakao.com', 
+        }, 
+      }, 
+      소셜: { 
+        likeCount: 286, 
+        commentCount: 45, 
+        sharedCount: 845, 
+      },
+      버튼: [
+        { 
+          제목: '웹으로 보기', 
+          링크: { 
+            mobileWebUrl: 'https://developers.kakao.com', 
+            webUrl: 'https://developers.kakao.com', 
+          }, 
+        }, 
+        { 
+          제목: '앱 으로 보기', 
+          링크: { 
+            mobileWebUrl: 'https://developers.kakao.com', 
+            webUrl: 'https://developers.kakao.com', 
+          }, 
+        }, 
+      ], 
+    }) 
+  } 
+; window.kakaoDemoCallback && window.kakaoDemoCallback() } 
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) } 
+</script> 
+    
+</body> 
+<
